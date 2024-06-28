@@ -8,12 +8,18 @@
 
 ## Imagenes
 
-PANTALLA INICIO
-["Pantalla Inicial"](.imgReadMe/pantallaInicio.jpeg)
-PANTALLA NIVEL 1
-["Pantalla Nivel 1"](.imgReadMe/1Nivel.png)
-PANTALLA NIVEL 2
-["Pantalla Nivel 2"](.imgReadMe/2Nivel.png)
+**PANTALLA INICIO**
+
+![Pantalla Inicial](./imgReadMe/pantallaInicio.jpeg)
+
+**PANTALLA NIVEL 1**
+
+![Pantalla Nivel 1](./imgReadMe/1Nivel.png)
+
+**PANTALLA NIVEL 2**
+
+![Pantalla Nivel 2](./imgReadMe/2Nivel.png)
+
 
 ## CONTROLES
 Para `MOVER` el globa se deben utilizar las Flechas `<- ->`.
@@ -30,9 +36,9 @@ Recolectar las monedas hará que puedas pasar de nivel y ganar el juego. Cuant
  
 `Nivel 1` = Debes juntar 15 monedas para pasar al siguiente nivel y ganar el juego. ¡Cuidado con los obstáculos! Este nivel cuenta con 2 de ellos, que harán que tu misión sea más dificil de cumplir. Estos obstáculos son:
 
-﻿﻿_Nubes_ : Harán que pierdas 2 monedas.
+_Nubes_: Harán que pierdas 2 monedas.
   
-﻿﻿_Nubes con lluvia_: No solo perderás 3 monedas, sino que también, te costara una vida.
+_Nubes con lluvia_: No solo perderás 3 monedas, sino que también, te costara una vida.
 
 Pasarás al nivel 2 al alcanzar la cantidad de monedas requeridas.
 En caso de haber perdido vidas, no tenes de que preocuparte, ¡en el nivel 2 las recuperaras! 
