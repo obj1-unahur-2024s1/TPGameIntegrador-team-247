@@ -4,9 +4,6 @@ import elementos.*
 import niveles.*
 import pantallas.*
 
-const ancho = 15
-const alto = 30
-const celda = 60
 
 object juego{
 	var nivel = nivel1
@@ -19,9 +16,9 @@ object juego{
 	
 	method configuracionInicial(){
 		game.title("Ballon Up")
-		game.width(ancho)
-		game.height(alto)
-		game.cellSize(celda)
+		game.width(15)
+		game.height(30)
+		game.cellSize(60)
 	}
 	
 	method configurar(){
@@ -52,6 +49,7 @@ object juego{
 	}
 	
 	method reset(){
+		globo.reiniciar()
         contadorMonedas.reiniciar()
         vidas.reiniciar()
     }
@@ -103,6 +101,8 @@ object vidas{
 		if (vidas == 0)
 			juego.gameOver()
 	}
+	
+	method cantidadVidas() = vidas
 	
 	method reiniciar(){
 		vidas = 3

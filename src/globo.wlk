@@ -1,7 +1,7 @@
 import wollok.game.*
 
 object globo{
-	var position = game.at(game.width()/2, 5)
+	var position = self.posicionInicial()
 	
 	method image() = "globo.png"
 	method position() = position
@@ -21,4 +21,10 @@ object globo{
 		if (position.x() > 0)
 			position = position.left(1)
 	}	
+	
+	method posicionInicial() = game.at(game.width()/2, 5)
+	
+	method reiniciar(){
+		position = self.posicionInicial()
+	}
 }

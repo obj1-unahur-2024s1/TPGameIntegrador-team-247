@@ -1,0 +1,84 @@
+import wollok.game.*
+import juego.*
+import globo.*
+import elementos.*
+import pantallas.*
+
+
+describe "Tests cuando algún elemento choca con el globo"{
+	const nube = new Nube()
+	const lluvia = new NubeLluvia() 
+	const nubeRayo = new NubeRayo() 
+	
+	method initialize(){
+		game.clear()
+		contadorMonedas.conseguirMoneda()
+		contadorMonedas.conseguirMoneda()
+		contadorMonedas.conseguirMoneda()
+		contadorMonedas.conseguirMoneda()
+		contadorMonedas.conseguirMoneda()
+	}
+	
+	test "cuando el globo choca con una nube el contador pierde dos monedas"{
+		nube.chocarGlobo()
+		assert.equals(3, contadorMonedas.cantidadMonedas())
+	}
+	
+	test "cuando el globo choca con una nube con lluvia el contador pierde 5 monedas y 1 vida"{
+		lluvia.chocarGlobo()
+		assert.equals(0, contadorMonedas.cantidadMonedas())
+		assert.equals(2, vidas.cantidadVidas())
+	}
+	
+	test "cuando el globo choca con una nube con rayo se pierden 5 monedas"{
+		nubeRayo.chocarGlobo()
+		assert.equals(0, contadorMonedas.cantidadMonedas())		
+	}
+}
+
+describe "Tests de movimientos del globo"{
+	method initialize(){
+		game.clear()
+		juego.configuracionInicial()
+	}
+	
+	test "la posicion X del globo es (9.5) cuando se mueve dos veces a la derecha"{
+		globo.moverDerecha()
+		globo.moverDerecha()
+		assert.equals(9.5, globo.position().x())
+	}
+	
+	test "la posicion X del globo es (5.5) cuando se mueve dos veces a la izquierda"{
+		globo.moverIzquierda()
+		globo.moverIzquierda()
+		assert.equals(5.5, globo.position().x())
+	}
+}
+
+
+describe "Tests de añadir y remover visuales"{
+	const meteorito = new Meteorito()
+	
+	method initialize(){
+		game.clear()
+		game.addVisual(meteorito)
+	}
+	
+	test "el tablero del juego contiene el visual meteorito"{
+		assert.that(game.hasVisual(meteorito))
+	}
+	
+	test "se remueve el visual meteorito y deja de estar en el tablero"{
+		game.removeVisual(meteorito)
+		assert.notThat(game.hasVisual(meteorito))
+	}
+	
+	test "el tablero del juego contiene el visual de pantalla de inicio"{
+		game.addVisual(pantallaInicio)
+		assert.that(game.hasVisual(pantallaInicio))
+	}
+	
+	test "el tablero del juego no contiene el visual de la pantalla de gameOver"{
+		assert.notThat(game.hasVisual(gameover))
+	}
+}

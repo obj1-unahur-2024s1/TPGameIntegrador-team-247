@@ -46,7 +46,7 @@ object nivel1 inherits Nivel{
 	
 	override method generarMonedas(){
 		super()
-		game.onTick(10, "contador monedas", {if (contadorMonedas.cantidadMonedas() == 15) self.ganar()})
+		game.onTick(10, "contador monedas", {if (contadorMonedas.cantidadMonedas() == 10) self.ganar()})
 	}
 	
 	override method ganar(){
@@ -68,14 +68,14 @@ object nivel2 inherits Nivel{
 	}
 	
 	override method generarObstaculos(){
-		game.onTick(600, "generacion nubeRayo", {new NubeRayo().aparecer()})
-		game.onTick(1200, "generacion meteoritoFuego", {new MeteoritoFuego().aparecer()})
-		game.onTick(900, "generacion meteoritoSinFuego", {new Meteorito().aparecer()})
+		game.onTick(500, "generacion nubeRayo", {new NubeRayo().aparecer()})
+		game.onTick(1100, "generacion meteoritoFuego", {new MeteoritoFuego().aparecer()})
+		game.onTick(800, "generacion meteoritoSinFuego", {new Meteorito().aparecer()})
 	}
 	
 	override method generarMonedas(){
 		super()
-		game.onTick(10, "contador monedas", {if (contadorMonedas.cantidadMonedas() == 30) self.ganar()})
+		game.onTick(10, "contador monedas", {if (contadorMonedas.cantidadMonedas() == 20) self.ganar()})
 	}
 	
 	override method ganar(){
