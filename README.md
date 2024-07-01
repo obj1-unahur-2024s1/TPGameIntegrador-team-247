@@ -34,7 +34,7 @@ Recolectar las monedas hará que puedas pasar de nivel y ganar el juego. Cuant
 
 **El juego cuenta con dos niveles:**
  
-`Nivel 1` = Debes juntar 15 monedas para pasar al siguiente nivel y ganar el juego. ¡Cuidado con los obstáculos! Este nivel cuenta con 2 de ellos, que harán que tu misión sea más dificil de cumplir. Estos obstáculos son:
+`Nivel 1` = Debes juntar 10 monedas para pasar al siguiente nivel y ganar el juego. ¡Cuidado con los obstáculos! Este nivel cuenta con 2 de ellos, que harán que tu misión sea más dificil de cumplir. Estos obstáculos son:
 
 _Nubes_: Harán que pierdas 2 monedas.
   
@@ -44,7 +44,7 @@ Pasarás al nivel 2 al alcanzar la cantidad de monedas requeridas.
 En caso de haber perdido vidas, no tenes de que preocuparte, ¡en el nivel 2 las recuperaras! 
 El contador de monedas, al igual que las vidas, se actualiza. Comenzaras el siguiente nivel con 0 monedas.
 
-`Nivel 2` = Debes recolectar 30 monedas para finalizar el juego, convirtiéndote en el ganador.
+`Nivel 2` = Debes recolectar 20 monedas para finalizar el juego, convirtiéndote en el ganador.
 A diferencia del nivel 1, los obstáculos en este nivel llegan mas rápido. ¡Sé muy cuidadoso con eso!
 Los obstáculos a evitar son:
 
