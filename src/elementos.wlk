@@ -84,7 +84,6 @@ class Meteorito inherits Elementos{
 	}
 }
 
-
 class NubeRayo inherits Elementos{
 	
 	override method image() = "nubeConRayo.png"
