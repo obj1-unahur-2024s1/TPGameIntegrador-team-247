@@ -6,7 +6,9 @@ import pantallas.*
 
 
 object juego{
-	var nivel = nivel1
+	const nivel1 = new Nivel1()
+    var nivel = nivel1
+	
 	
 	method iniciar(){
 		self.configuracionInicial()
@@ -87,14 +89,7 @@ object vidas{
 	
 	method position() = position
 	
-	method image(){
-		if (vidas == 3)
-			return "vidas/3Vidas.png"
-		else if (vidas == 2)
-			return "vidas/2Vidas.png"
-		else
-			return "vidas/1Vida.png"	
-	}
+	method image() = "vidas/"+vidas.toString()+"Vidas.png"
 	
 	method perderVida(cuantas){
 		vidas = 0.max(vidas-cuantas)
