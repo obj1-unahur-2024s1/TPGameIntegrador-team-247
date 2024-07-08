@@ -92,3 +92,12 @@ class NubeRayo inherits Elementos{
 		contadorMonedas.restarMonedas(5)
 	}
 }
+
+
+
+
+
+
+
+
+
